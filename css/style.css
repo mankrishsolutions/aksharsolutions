@@ -1,0 +1,343 @@
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #f5f7fb;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 91, 132, 0.75);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+    .nav-logo {
+        font-family: 'Jost', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 35px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-family: 'Jost', sans-serif;
+        transition: 0.3s;
+    }
+
+    .nav-links li a:hover {
+        color: #dbe5ff;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        height: 100vh;
+        background: #005b84;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        color: white;
+        padding: 100px 100px 60px 100px;
+        box-sizing: border-box;
+    }
+
+    .hero-title-top {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .hero-left {
+        width: 45%;
+        text-align: center;
+    }
+
+        .hero-left img {
+            width: 425px;
+            max-width: 100%;
+        }
+
+    .hero-right {
+        width: 60%;
+        text-align: center;
+    }
+
+    .hero-right h1 {
+        font-family: 'Jost', sans-serif;
+        font-size: 90px;
+        font-weight: 300;
+        line-height: 1.05;
+        letter-spacing: 1px;
+    }
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 38px;
+    background: white;
+    color: #1535b8;
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        background: #dbe5ff;
+    }
+
+
+    .about {
+        padding: 20px 80px;
+        background: #f8f8f8;
+        text-align: center;
+    }
+
+    .about h2 {
+        font-family: 'Jost', sans-serif;
+        font-size: 72px;
+        font-weight: 300;
+        color: #1535b8;
+        margin-bottom: 30px;
+    }
+
+    .about p {
+        max-width: 1200px;
+        margin: 0 auto 40px auto;
+        font-size: 24px;
+        line-height: 1.6;
+        font-family: 'Jost', sans-serif;
+        color: #111;
+    }
+
+    .about strong {
+        font-weight: 700;
+    }
+
+/* SECTION HEADINGS */
+.products h2,
+.about h2,
+.why-akshar h2,
+.testimonials h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: #1535b8;
+    margin-bottom: 50px;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 90px 40px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 320px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    padding: 25px;
+    transition: 0.3s;
+}
+
+    .product-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .product-card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+/* WHY AKSHAR */
+.why-akshar {
+    padding: 90px 40px;
+    background: #eef3ff;
+    text-align: center;
+}
+
+.why-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.why-card {
+    width: 280px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    padding: 90px 40px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    width: 300px;
+    background: #f8f8f8;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+    /* TEXT */
+    .product-card h3,
+    .why-card h3,
+    .testimonial-card h4 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+    }
+
+
+    .contact {
+        background: #003f88;
+        color: white;
+        text-align: center;
+        padding: 100px 40px;
+    }
+
+    .contact h2 {
+        font-family: 'Jost', sans-serif;
+        font-size: 72px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .contact-subtitle {
+        font-size: 24px;
+        margin-bottom: 60px;
+    }
+
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        flex-wrap: wrap;
+    }
+
+    .contact-left {
+        text-align: left;
+    }
+
+        .contact-left h3 {
+            font-size: 34px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .contact-left p {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+    .contact-right img {
+        width: 300px;
+        border-radius: 12px;
+        background: white;
+        padding: 10px;
+    }
+
+    .social-icons a {
+        font-size: 32px;
+        margin-right: 15px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        width: 65px;
+        height: 65px;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999;
+        transition: 0.3s;
+    }
+
+    .whatsapp-float img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
+
+    /* MOBILE */
+    @media screen and (max-width: 900px) {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hero-left,
+        .hero-right {
+            width: 100%;
+        }
+
+            .hero-right h1 {
+                font-size: 55px;
+            }
+
+            .hero-left img {
+                width: 220px;
+            }
+
+        .products h2,
+        .about h2,
+        .why-akshar h2,
+        .testimonials h2 {
+            font-size: 42px;
+        }
+    }
