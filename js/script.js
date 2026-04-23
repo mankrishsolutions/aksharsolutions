@@ -158,30 +158,39 @@
 
 function openModal(id) {
     document.getElementById(id).classList.add('active');
-    document.body.style.overflow = 'hidden';
 }
 
 function closeModal(id) {
     document.getElementById(id).classList.remove('active');
-    document.body.style.overflow = '';
+}
+
+function closeAllModals() {
+    document.querySelectorAll('.modal-overlay.active').forEach(function (overlay) {
+        overlay.classList.remove('active');
+    });
 }
 
 document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
     overlay.addEventListener('click', function (e) {
         if (e.target === overlay) {
             overlay.classList.remove('active');
-            document.body.style.overflow = '';
         }
     });
 });
 
 document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay.active').forEach(function (overlay) {
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    }
+    if (e.key === 'Escape') closeAllModals();
+});
+
+var mouseOverModal = false;
+
+document.querySelectorAll('.modal').forEach(function (modal) {
+    modal.addEventListener('mouseenter', function () { mouseOverModal = true; });
+    modal.addEventListener('mouseleave', function () { mouseOverModal = false; });
+});
+
+window.addEventListener('scroll', function () {
+    if (!mouseOverModal) closeAllModals();
 });
 
 function copyToClipboard(text, el) {
