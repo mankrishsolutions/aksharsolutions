@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akshar Solutions — Lead Management & Custom Software</title>
+    <title>Akshar Solutions - Lead Management & Custom Software</title>
     <meta name="description" content="Akshar Solutions provides lead management systems, Excel add-ins, and customized software development with 25+ years of IT expertise." />
-    <meta property="og:title" content="Akshar Solutions — The one you can TRUST on." />
+    <meta property="og:title" content="Akshar Solutions - The one you can TRUST on." />
     <meta property="og:description" content="Lead management systems, Excel add-ins, and customized software development with 25+ years of IT expertise." />
     <meta property="og:type" content="website" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -113,19 +113,51 @@
 
         <div class="product-grid">
 
-            <div class="product-card">
+            <div class="product-card" onclick="openModal('lmsModal')">
                 <img src="images/lms.png" alt="Lead Management System dashboard screenshot" loading="lazy">
                 <h3>Lead Management System</h3>
                 <p>Powerful IndiaMART lead management utility for streamlined business growth.</p>
+                <span class="card-cta">Learn more</span>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" onclick="openModal('excelModal')">
                 <img src="images/excel.png" alt="Excel Add-In for IndiaMART leads" loading="lazy">
                 <h3>Excel Add-In</h3>
                 <p>Download and manage IndiaMART leads directly inside Excel.</p>
+                <span class="card-cta">Learn more</span>
             </div>
 
         </div>
+
+        <!-- LMS Modal -->
+        <div class="modal-overlay" id="lmsModal">
+            <div class="modal">
+                <button class="modal-close" onclick="closeModal('lmsModal')">&times;</button>
+                <h3>Lead Management System</h3>
+                <span class="modal-tag">IndiaMART LMS</span>
+                <p>We understand the importance of efficient lead management in driving business growth. That's why we're proud to introduce our cutting-edge IndiaMART Lead Management Utility, designed to streamline your lead acquisition and conversion processes like never before.</p>
+                <a href="#contact" class="modal-cta" onclick="closeModal('lmsModal')">Contact us for a demo</a>
+            </div>
+        </div>
+
+        <!-- Excel Modal -->
+        <div class="modal-overlay" id="excelModal">
+            <div class="modal">
+                <button class="modal-close" onclick="closeModal('excelModal')">&times;</button>
+                <h3>IndiaMART Leads Data Excel Add-In</h3>
+                <p>Effortlessly manage your IndiaMART leads data with our versatile Excel Add-In. This powerful tool enables businesses to download leads directly from IndiaMART's API and organize them within Excel for easy access and analysis.</p>
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>Seamless lead download</strong> - automatically download your IndiaMART leads data directly into Excel, saving time and reducing manual effort.</li>
+                    <li><strong>Data validation</strong> - ensure accuracy and consistency with built-in validation checks that help identify and fix data issues.</li>
+                    <li><strong>Text search &amp; special character removal</strong> - easily search for specific information and clean up data by removing unwanted special characters.</li>
+                    <li><strong>Data management</strong> - maintain and organize your leads data in a structured, user-friendly format for streamlined processing.</li>
+                </ul>
+                <div class="modal-highlight">One-time purchase for lifetime access - no recurring fees or hidden charges.</div>
+                <a href="#contact" class="modal-cta" onclick="closeModal('excelModal')">Contact us for pricing</a>
+            </div>
+        </div>
+        <p class="pricing-cta">Interested in pricing? <a href="#contact">Contact us</a> for a custom quote.</p>
     </section>
 
     <!-- Why Akshar -->
@@ -175,6 +207,27 @@
             </div>
 
         </div>
+    </section>
+
+    <!-- Request a Demo -->
+    <section class="demo reveal">
+        <h2>Request a Demo</h2>
+        <p class="demo-subtitle">Fill in your details and we'll get back to you shortly.</p>
+        <form class="demo-form" id="demoForm">
+            <div class="demo-form-row">
+                <input type="text" id="demoName" placeholder="Your name" required>
+                <input type="tel" id="demoPhone" placeholder="Phone number" required>
+            </div>
+            <input type="text" id="demoCompany" placeholder="Company name (optional)">
+            <select id="demoProduct">
+                <option value="" disabled selected>Select a product</option>
+                <option value="Lead Management System">Lead Management System</option>
+                <option value="Excel Add-In">Excel Add-In</option>
+                <option value="Custom Software">Custom Software</option>
+            </select>
+            <textarea id="demoMessage" placeholder="Tell us about your requirements (optional)" rows="3"></textarea>
+            <button type="submit" class="demo-btn">Send via WhatsApp</button>
+        </form>
     </section>
 
     <!-- Contact Section -->

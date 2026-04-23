@@ -133,7 +133,56 @@
     statNumbers.forEach(function (el) {
         statsObserver.observe(el);
     });
+
+    // Demo form
+    var demoForm = document.getElementById('demoForm');
+    demoForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('demoName').value.trim();
+        var phone = document.getElementById('demoPhone').value.trim();
+        var company = document.getElementById('demoCompany').value.trim();
+        var product = document.getElementById('demoProduct').value;
+        var message = document.getElementById('demoMessage').value.trim();
+
+        var text = 'Hi, I would like to request a demo.\n\n';
+        text += 'Name: ' + name + '\n';
+        text += 'Phone: ' + phone + '\n';
+        if (company) text += 'Company: ' + company + '\n';
+        if (product) text += 'Product: ' + product + '\n';
+        if (message) text += 'Message: ' + message + '\n';
+
+        var url = 'https://wa.me/919373334089?text=' + encodeURIComponent(text);
+        window.open(url, '_blank');
+    });
 })();
+
+function openModal(id) {
+    document.getElementById(id).classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+    document.getElementById(id).classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
+    overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+});
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(function (overlay) {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+});
 
 function copyToClipboard(text, el) {
     navigator.clipboard.writeText(text).then(function () {

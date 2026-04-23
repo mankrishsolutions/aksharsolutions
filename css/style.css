@@ -281,6 +281,234 @@ body.dark-mode .stats {
         border-radius: 10px;
     }
 
+.product-card {
+    cursor: pointer;
+}
+
+.card-cta {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #003f88;
+}
+
+body.dark-mode .card-cta {
+    color: #6e8efb;
+}
+
+/* PRODUCT MODALS */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.modal-overlay.active .modal {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.modal h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #1535b8;
+    margin: 0 0 8px 0;
+}
+
+.modal-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #003f88;
+    background: #eef3ff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.modal h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 24px 0 12px;
+    color: #222;
+}
+
+.modal p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.modal ul {
+    padding-left: 20px;
+    margin: 0 0 20px;
+}
+
+.modal ul li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.modal-highlight {
+    background: #eef3ff;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #003f88;
+    margin-bottom: 20px;
+}
+
+.modal-cta {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #003f88;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.modal-cta:hover {
+    background: #002d66;
+}
+
+body.dark-mode .modal {
+    background: #1e1e1e;
+}
+
+body.dark-mode .modal h3 {
+    color: #6e8efb;
+}
+
+body.dark-mode .modal-tag {
+    background: #2a2a3e;
+    color: #6e8efb;
+}
+
+body.dark-mode .modal h4 {
+    color: #ddd;
+}
+
+body.dark-mode .modal p,
+body.dark-mode .modal ul li {
+    color: #bbb;
+}
+
+body.dark-mode .modal-close {
+    color: #666;
+}
+
+body.dark-mode .modal-close:hover {
+    color: #ddd;
+}
+
+body.dark-mode .modal-highlight {
+    background: #2a2a3e;
+    color: #6e8efb;
+}
+
+body.dark-mode .modal-cta {
+    background: #6e8efb;
+}
+
+body.dark-mode .modal-cta:hover {
+    background: #5a7bf7;
+}
+
+@media screen and (max-width: 480px) {
+    .modal {
+        padding: 24px 20px;
+    }
+
+    .modal h3 {
+        font-size: 22px;
+    }
+}
+
+.pricing-cta {
+    margin-top: 40px;
+    font-size: 17px;
+    color: #555;
+}
+
+.pricing-cta a {
+    color: #003f88;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #003f88;
+    transition: 0.3s;
+}
+
+.pricing-cta a:hover {
+    color: #1535b8;
+    border-bottom-color: #1535b8;
+}
+
+body.dark-mode .pricing-cta {
+    color: #aaa;
+}
+
+body.dark-mode .pricing-cta a {
+    color: #6e8efb;
+    border-bottom-color: #6e8efb;
+}
+
 /* WHY AKSHAR */
 .why-akshar {
     padding: 90px 40px;
@@ -390,6 +618,115 @@ body.dark-mode .testimonial-card span {
         font-weight: 600;
     }
 
+
+/* DEMO FORM */
+.demo {
+    padding: 90px 40px;
+    background: #f5f7fb;
+    text-align: center;
+}
+
+.demo h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #1535b8;
+    margin-bottom: 12px;
+}
+
+.demo-subtitle {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.demo-form {
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+.demo-form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.demo-form-row input {
+    flex: 1;
+}
+
+.demo-form input,
+.demo-form select,
+.demo-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    background: white;
+    color: #333;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.demo-form input:focus,
+.demo-form select:focus,
+.demo-form textarea:focus {
+    outline: none;
+    border-color: #003f88;
+}
+
+.demo-form textarea {
+    resize: vertical;
+}
+
+.demo-btn {
+    padding: 14px 32px;
+    background: #25d366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: center;
+}
+
+.demo-btn:hover {
+    background: #1fb855;
+}
+
+body.dark-mode .demo {
+    background: #181818;
+}
+
+body.dark-mode .demo h2 {
+    color: #6e8efb;
+}
+
+body.dark-mode .demo-subtitle {
+    color: #aaa;
+}
+
+body.dark-mode .demo-form input,
+body.dark-mode .demo-form select,
+body.dark-mode .demo-form textarea {
+    background: #1e1e1e;
+    border-color: #333;
+    color: #ddd;
+}
+
+body.dark-mode .demo-form input:focus,
+body.dark-mode .demo-form select:focus,
+body.dark-mode .demo-form textarea:focus {
+    border-color: #6e8efb;
+}
 
     .contact {
         background: #003f88;
@@ -916,8 +1253,13 @@ body.dark-mode .btn:hover {
 
         .products,
         .why-akshar,
-        .testimonials {
+        .testimonials,
+        .demo {
             padding: 60px 24px;
+        }
+
+        .demo h2 {
+            font-size: 40px;
         }
 
         .product-card {
@@ -1058,7 +1400,8 @@ body.dark-mode .btn:hover {
         .products h2,
         .about h2,
         .why-akshar h2,
-        .testimonials h2 {
+        .testimonials h2,
+        .demo h2 {
             font-size: 34px;
             margin-bottom: 30px;
         }
@@ -1072,6 +1415,14 @@ body.dark-mode .btn:hover {
 
         .contact h2 {
             font-size: 38px;
+        }
+
+        .demo-form-row {
+            flex-direction: column;
+        }
+
+        .demo {
+            padding: 50px 20px;
         }
 
         .stats-grid {
